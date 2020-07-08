@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import Button from "./button";
+import Form from "./form";
 
 //this is a component
 export default function Search() {
-  const [state, setState] = useState("");
-
   return (
     <div>
       <h1>Hello :)</h1>
       {searchList()}
-      {searchList()}
+      <Form />
     </div>
   );
 }
