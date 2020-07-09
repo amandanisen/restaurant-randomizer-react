@@ -6,6 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Checkbox from './checkboxform';
+import MapContainer from '../googlemaps/userlocationmap'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,6 +54,8 @@ export default function Form() {
 
   return (
     <div className={classes.root}>
+      {/* Setting up google maps for user to input location */}
+      <MapContainer />
       <List component="nav" aria-label="Distance settings">
         <ListItem
           button
@@ -66,6 +69,7 @@ export default function Form() {
 
         </ListItem>
       </List>
+      
       <Menu
         id="lock-menu"
         anchorEl={anchorEl}
