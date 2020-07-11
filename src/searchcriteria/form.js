@@ -7,6 +7,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Checkbox from './checkboxform';
 import MapContainer from '../googlemaps/userlocationmap'
+import UserLocation from '../googlemaps/userlocation'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,6 +35,7 @@ export default function Form() {
   const [budget, setBudget] = useState("");
 
   const classes = useStyles();
+  //achorel is just a popover 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
@@ -55,6 +57,7 @@ export default function Form() {
   return (
     <div className={classes.root}>
       {/* Setting up google maps for user to input location */}
+      <UserLocation />
       <MapContainer />
       <List component="nav" aria-label="Distance settings">
         <ListItem
@@ -70,6 +73,7 @@ export default function Form() {
         </ListItem>
       </List>
       
+  {/*this menu is used to select the distance the user would like to travel*/}
       <Menu
         id="lock-menu"
         anchorEl={anchorEl}
@@ -84,7 +88,6 @@ export default function Form() {
             selected={index === selectedIndex}
             onClick={(event) => handleMenuItemClick(event, index)}
           >
-           
             {option}
           </MenuItem>
         
