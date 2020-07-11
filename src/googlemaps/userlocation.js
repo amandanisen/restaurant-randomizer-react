@@ -1,5 +1,4 @@
 import React from "react";
-import {GOOGLE_API_KEY} from '../config';
 
 //adding google api
 // import { GoogleMap, LoadScript } from "@react-google-maps/api";
@@ -82,7 +81,6 @@ handleLocationError(error){
         <p>Latitude: {this.state.latitude}</p>
         <p>Longitude: {this.state.longitude}</p>
         <p>User Location: {this.state.userLocation}</p>
-        <userlocationmap lat={this.state.latitude} long={this.state.longitude}></userlocationmap>
       </div>
     );
   }

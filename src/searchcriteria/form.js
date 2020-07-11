@@ -57,7 +57,7 @@ export default function Form() {
   return (
     <div className={classes.root}>
       {/* Setting up google maps for user to input location */}
-      <UserLocation />
+      {/* <UserLocation /> */}
       <MapContainer />
       <List component="nav" aria-label="Distance settings">
         <ListItem
